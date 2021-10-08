@@ -26,9 +26,9 @@ class MlModel():
         return self.model
     
     @classmethod 
-    def params(self):
+    def params(cls):
         """ returns the parameters of the created model"""
-        return self.params
+        return cls.params
     
     @abstractmethod
     def loadData(self):

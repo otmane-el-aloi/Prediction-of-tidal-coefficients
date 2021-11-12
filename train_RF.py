@@ -14,7 +14,7 @@ def run():
     # Loading the model
     RF  = RFModel(params = {"n_estimators":100})
 
-    """ First experience: Is changing the params of the Random forest ameliorate the score"""
+    """ First experience: Changing the params of the Random forest ameliorates the score?"""
     # # Performing crossValidation (TimeSeries like cross validation)
     # tscv = TimeSeriesSplit(n_splits=10)
     # param_grid = {"n_estimators":[100, 200, 300, 400, 500],
@@ -27,7 +27,8 @@ def run():
     # # Fit best classifier
     # RF = RFModel(params= clf.best_params_)
     # RF.mlflowRun(n_run = "RF: GridSearchCV Best")
-
+    
+    """ Second experience: Changing the past values number ameliorates the score?"""
     # Finding Best back_step 
     back_step  = np.arange(14, 120) # up to 2 months a go 
     for step in back_step:
@@ -39,22 +40,6 @@ def run():
 
         # fitting the model and saving errors
         RF.mlflowRun("RF: Selecting best back step value")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

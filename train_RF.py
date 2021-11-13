@@ -17,10 +17,10 @@ def run():
     """ First experience: Is changing the params of the Random forest ameliorate the score"""
     # # Performing crossValidation (TimeSeries like cross validation)
     # tscv = TimeSeriesSplit(n_splits=10)
-    # param_grid = {"n_estimators":[100, 200, 300, 400, 500],
-    #               "max_depth": [2, 5, 10, 15],
-    #               "min_samples_split":[2, 5, 10, 15],
-    #               "min_samples_leaf":[1, 5, 10, 15]}
+    param_grid = {"n_estimators":[100, 200, 300, 400, 500],
+                  "max_depth": [2, 5, 10, 15],
+                  "min_samples_split":[2, 5, 10, 15],
+                  "min_samples_leaf":[1, 5, 10, 15]}
     # clf = GridSearchCV(RF.model, param_grid = param_grid, cv = tscv, verbose=10, n_jobs=-1)
     # best_clf = clf.fit(X_train, y_train)
 

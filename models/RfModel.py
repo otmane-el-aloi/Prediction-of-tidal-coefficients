@@ -37,6 +37,10 @@ class RFModel(MlModel):
     def fit(self, X, y):
         self.model.fit(X,y)
 
+    def predict(self, X):
+        y_predicted = self.model.predict(X)
+        return y_predicted
+
     def evaluate(self, X, y):
         y_predicted = self.model.predict(X)
         scores, score = metrics.rmsErrors(y, y_predicted)

@@ -81,10 +81,11 @@ class DataLoader():
     def addTimRelatedFeatures(self):
         """ This method adds hijri calendar related date-time features"""
         self.data['date'] = self.data['dateTime'].dt.date.values
-        self.data['hijri_day'] = df['date'].apply(lambda x: Gregorian(x.year, x.month, x.day).to_hijri().day)
-        self.data['hijri_month'] = df['date'].apply(lambda x: Gregorian(x.year, x.month, x.day).to_hijri().month)
-        self.data['hijri_year'] = df['date'].apply(lambda x: Gregorian(x.year, x.month, x.day).to_hijri().year)
+        self.data['hijri_day'] = self.data['date'].apply(lambda x: Gregorian(x.year, x.month, x.day).to_hijri().day)
+        self.data['hijri_month'] = self.data['date'].apply(lambda x: Gregorian(x.year, x.month, x.day).to_hijri().month)
+        self.data['hijri_year'] = self.data['date'].apply(lambda x: Gregorian(x.year, x.month, x.day).to_hijri().year)
         self.data['hour'] = self.data['dateTime'].dt.hour.values
+        self.data.drop(["date"], axis=1, inplace=True)
         print("Date-Time features added with sucess!")
 
     def splitDataSet(self, past_values = 14, step = 14):

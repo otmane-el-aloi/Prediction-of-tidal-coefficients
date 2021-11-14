@@ -43,7 +43,7 @@ class RFModel(MlModel):
         return scores, score
 
     def mlflowRun(self, n_run = "RF: tidal coefficients forcasting"):
-        """ this method execute an Mlflow run and logs important metrics, artifacts..."""
+        """ this method executes an Mlflow run and logs important metrics, artifacts..."""
         # load data 
         self.loadData()
         

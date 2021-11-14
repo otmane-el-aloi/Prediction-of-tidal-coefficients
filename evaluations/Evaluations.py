@@ -11,7 +11,7 @@ class metrics():
         pass
 
     @staticmethod
-    def rmsErrors(self, actual, predicted):
+    def rmsErrors(actual, predicted):
         scores = list()
         # calculate an RMSE score for each day
         for i in range(actual.shape[1]):

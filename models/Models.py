@@ -20,15 +20,9 @@ class MlModel():
         """ creates new class instance """
         return cls(params)
     
-    @classmethod
-    def model(self):
-        """ Returns the created model """
-        return self.model
-    
-    @classmethod 
-    def params(cls):
+    def params(self):
         """ returns the parameters of the created model"""
-        return cls.params
+        return self.params
     
     @abstractmethod
     def loadData(self):
@@ -47,6 +41,10 @@ class MlModel():
         """ trains, evalutes and logs all metrics, params and all the
         artifacts for the current run using the MLflow API
         """
+
+    def model(self):
+        """ Returns the created model """
+        return self.model
 
     def save(self, filename):
         """ saves the model to a pickle format"""

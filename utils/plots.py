@@ -14,8 +14,6 @@ class Plots():
     def __init__(self, figsize):
         self.figsize = figsize
 
-
-    @staticmethod 
     def plotRmse(self, errors):
         plt.figure(figsize=self.figsize)
         plt.plot(np.arange(14)+1, errors)
@@ -24,8 +22,6 @@ class Plots():
         plt.title("Evolution of the RMSE over time")
         plt.grid()
 
-
-    @staticmethod
     def plotForcast(self, X, y, y_pred, data_index):
         """ this methods plots the forcast result of a given dataPoint """
 
@@ -33,16 +29,16 @@ class Plots():
         past_values = len(X[0])
         step = len(y[0])
         # Input 
-        plt.scatter(np.arange(past_values)+1, X[i], color = "red")
-        plt.plot(np.arange(past_values)+1, X[i], color = "red")
+        plt.scatter(np.arange(past_values)+1, X[data_index], color = "red")
+        plt.plot(np.arange(past_values)+1, X[data_index], color = "red")
 
         # Ouptut (actual)
-        plt.scatter(np.arange(past_values)+step+1, y[i], color = "red")
-        plt.plot(np.arange(past_values)+step+1, y[i], color = "red", label = "actual")
+        plt.scatter(np.arange(past_values)+step+1, y[data_index], color = "red")
+        plt.plot(np.arange(past_values)+step+1, y[data_index], color = "red", label = "actual")
 
         # Ouput (predicted)
-        plt.scatter(np.arange(past_values)+step+1, y_pred[i], color ="blue")
-        plt.plot(np.arange(past_values)+step+1, y_pred[i], color = "blue",  label = "predicted")
+        plt.scatter(np.arange(past_values)+step+1, y_pred[data_index], color ="blue")
+        plt.plot(np.arange(past_values)+step+1, y_pred[data_index], color = "blue",  label = "predicted")
 
         # Decoration
         plt.axvline(x=step, color = "black")

@@ -36,12 +36,6 @@ class MlModel():
     def evaluate(slef):
         """ evaluates the model using the defined metrics"""
 
-    @abstractmethod
-    def mlflowRun(self):
-        """ trains, evalutes and logs all metrics, params and all the
-        artifacts for the current run using the MLflow API
-        """
-
     def model(self):
         """ Returns the created model """
         return self.model

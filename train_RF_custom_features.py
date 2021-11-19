@@ -15,7 +15,7 @@ from models.RfModel import RFModel
 def mlflowRun(model, X_train, X_test, y_train, y_test, n_run = "RF: tidal coefficients forcasting"):
         """ this method executes an Mlflow run and logs important metrics, artifacts..."""
         # load data 
-        model.loadData(X_train, X_test, y_train, y_test)
+        model.loadCustomData(X_train, X_test, y_train, y_test)
         
         # Mlflow run
         with mlflow.start_run(run_name = n_run) as run:
@@ -29,7 +29,6 @@ def mlflowRun(model, X_train, X_test, y_train, y_test, n_run = "RF: tidal coeffi
             # log model and params using MLflow API
             mlflow.sklearn.log_model(model.model, "random-forest-reg-model")
             mlflow.log_params(model.params)
-            mlflow.log_param("past_step", model.past)
 
             # log metrics 
             y_predicted = model.predict(X_test)
@@ -73,8 +72,8 @@ def run():
     tscv = TimeSeriesSplit(n_splits=10)
     param_grid = {"n_estimators":[100, 200, 300, 400, 500],
                   "max_depth": [2, 5, 10, 15, 20, 25],
-                  "min_samples_split":[2, 5, 10, 15],
-                  "min_samples_leaf":[1, 5, 10, 15, 20]}
+                  "min_samples_split":[2, 5, 10],
+                  "min_samples_leaf":[1, 5, 10, 15]}
     clf = GridSearchCV(RF.model, param_grid = param_grid, cv = tscv, verbose=10, scoring="neg_mean_squared_error", n_jobs=-1)
     best_clf = clf.fit(X_train, y_train)
 

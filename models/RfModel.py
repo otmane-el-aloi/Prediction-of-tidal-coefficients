@@ -1,6 +1,5 @@
 
 # external
-from typing import AbstractSet, overload
 from sklearn.ensemble import RandomForestRegressor
 
 
@@ -29,14 +28,11 @@ class RFModel(MlModel):
     def setPast(self, value):
         self.past = value
 
-    @overload
     def loadData(self):
         self.df = self.dataLoader.createDataFrame()
         self.X_train, self.X_test, self.y_train, self.y_test = self.dataLoader.splitDataSet(self.past,
                                                                                             self.future)
-    
-    @overload
-    def loadData(self, X_train, X_test, y_train, y_test):
+    def loadCustomData(self, X_train, X_test, y_train, y_test):
         self.X_train = X_train
         self.X_test = X_test
         self.y_train = y_train

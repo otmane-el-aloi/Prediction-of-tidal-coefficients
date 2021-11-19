@@ -14,8 +14,6 @@ from models.RfModel import RFModel
 
 def mlflowRun(model, X_train, X_test, y_train, y_test, n_run = "RF: tidal coefficients forcasting"):
         """ this method executes an Mlflow run and logs important metrics, artifacts..."""
-        # load data 
-        model.loadCustomData(X_train, X_test, y_train, y_test)
         
         # Mlflow run
         with mlflow.start_run(run_name = n_run) as run:
@@ -24,7 +22,7 @@ def mlflowRun(model, X_train, X_test, y_train, y_test, n_run = "RF: tidal coeffi
             experiment_id = run.info.experiment_id
 
             # train model  and predict
-            model.fit(model.X_train, model.y_train)
+            model.fit(X_train, y_train)
             
             # log model and params using MLflow API
             mlflow.sklearn.log_model(model.model, "random-forest-reg-model")
@@ -32,11 +30,11 @@ def mlflowRun(model, X_train, X_test, y_train, y_test, n_run = "RF: tidal coeffi
 
             # log metrics 
             y_predicted = model.predict(X_test)
-            score= mean_squared_error(y_predicted, y_test, squared=False)
+            score= mean_squared_error(y_test, y_predicted, squared=False)
             mlflow.log_metric("rmse", score)
 
             # model saving
-        model.save("RF_model")
+        model.save("RF_custom_features_best.pk")
 
 def run():
     # TODO: load data after getting best features from feature engineering
@@ -58,7 +56,7 @@ def run():
     X_train = df_train.loc[:,df.columns!="coef"]
     y_train = df_train.loc[:, "coef"]
     X_test = df_test.loc[:, df.columns!= "coef"]
-    y_test = df_test.loc[:, df.columns!= "coef"]
+    y_test = df_test.loc[:, "coef"]
 
     # Dropping non usefull features
     for feature in worst_features:
@@ -70,19 +68,16 @@ def run():
 
     # Performing crossValidation (TimeSeries like cross validation)
     tscv = TimeSeriesSplit(n_splits=10)
-    param_grid = {"n_estimators":[100, 200, 300, 400, 500],
-                  "max_depth": [2, 5, 10, 15, 20, 25],
-                  "min_samples_split":[2, 5, 10],
-                  "min_samples_leaf":[1, 5, 10, 15]}
+    param_grid = {"n_estimators":[100]}
+                #   "max_depth": [2, 5, 10, 15, 20, 25],
+                #   "min_samples_split":[2, 5, 10],
+                #   "min_samples_leaf":[1, 5, 10, 15]
     clf = GridSearchCV(RF.model, param_grid = param_grid, cv = tscv, verbose=10, scoring="neg_mean_squared_error", n_jobs=-1)
     best_clf = clf.fit(X_train, y_train)
 
     # Fit best classifier
     RF = RFModel(params= clf.best_params_)
     mlflowRun(RF, X_train, X_test, y_train, y_test, n_run = "RF on custom features: GridSearchCV Best ")
-
-    # Save Model to traineModels
-    RF.save("RF_custom_features_best.pk")
     
 
 if __name__ == "__main__":

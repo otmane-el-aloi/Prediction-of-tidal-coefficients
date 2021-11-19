@@ -33,6 +33,26 @@ class DataLoader():
         self.data['dateTime'] = pd.to_datetime(self.data['dateTime'])
         print("data successfully loaded ")
     
+    def createDataFrameSeperateCoef(self):
+        """ laods data from data directory 
+        returns à dataFrame Object containing:
+            date: a datetime format column
+            min_coef: the corresponding min tidal coefficient 
+            max_coef: the corresponding max tidal coefficient
+        """
+        self.data = pd.read_csv(self.config["data"]["path"] + "data.txt",
+                                sep = "     ",
+                                index_col = None)
+        self.data = self.data.reset_index()
+        self.data= self.data.rename(columns = {'index':'dateTime', 'COEF_MAREE   UT: 0.0':'coef'})
+        self.data['dateTime'] = pd.to_datetime(self.data['dateTime'])
+        self.data["date"] = self.data["dateTime"].dt.date.values
+        self.data["min_ceof"] = self.data.groupby("date")["coef"].transform("min")
+        self.data["max_ceof"] = self.data.groupby("date")["coef"].transform("max")
+        self.data.drop(["coef", "dateTime"], axis = 1, inplace = True)
+        self.data = self.data.drop_duplicates()
+        print("data successfully loaded  with two target features")
+    
     def getMoonPhase(self, date):
         """ This method gets """
         self.moon.compute(date)
@@ -114,9 +134,10 @@ class DataLoader():
         self.data.drop(["date"], axis = 1, inplace= True)
         print("earth sun distance added successfully") 
         
-    def addMoonSunFeatures(self):
-        """ This method adds features related to moon and sun """
-        self.data["date"] = self.data["dateTime"].dt.date.values
+    def addMoonSunFeatures(self, two_target=False):
+        """ This method adds features related to moon and sun """   
+        if two_target == False: 
+            self.data["date"] = self.data["dateTime"].dt.date.values
         self.data["moon_phase"] = self.data['date'].apply(lambda x :self.getMoonPhase(x))
         self.data["earth_moon_distance"] = self.data['date'].apply(lambda x: self.getMoonDistance(x))
         self.data["sun_moon_distance"] = self.data['date'].apply(lambda x: self.getMoonSunDistance(x))
@@ -125,16 +146,17 @@ class DataLoader():
         self.data["subsolar_latitude"] = self.data['date'].apply(lambda x: self.getMoonSubSolarLatitude(x))
         self.data["elongation"] = self.data['date'].apply(lambda x: self.getMoonElongation(x))
         self.data["earth_sun_distance"] = self.data['date'].apply(lambda x: self.getSunEarthDistance(x))
-        self.data.drop(["date"], axis=1, inplace=True)
         print("Features added successfully!")
     
-    def addTimRelatedFeatures(self):
+    def addTimRelatedFeatures(self, two_target = False):
         """ This method adds hijri calendar related date-time features"""
-        self.data['date'] = self.data['dateTime'].dt.date.values
+        if two_target == False:
+            self.data['date'] = self.data['dateTime'].dt.date.values
+            self.data['hour'] = self.data['dateTime'].dt.hour.values
         self.data['hijri_day'] = self.data['date'].apply(lambda x: Gregorian(x.year, x.month, x.day).to_hijri().day)
         self.data['hijri_month'] = self.data['date'].apply(lambda x: Gregorian(x.year, x.month, x.day).to_hijri().month)
         self.data['hijri_year'] = self.data['date'].apply(lambda x: Gregorian(x.year, x.month, x.day).to_hijri().year)
-        self.data['hour'] = self.data['dateTime'].dt.hour.values
+        self.data['year']= self.data["date"].apply(lambda x: x.year)
         self.data.drop(["date"], axis=1, inplace=True)
         print("Date-Time features added with sucess!")
 

@@ -36,12 +36,6 @@ class MlModel():
     def evaluate(slef):
         """ evaluates the model using the defined metrics"""
 
-    @abstractmethod
-    def mlflowRun(self):
-        """ trains, evalutes and logs all metrics, params and all the
-        artifacts for the current run using the MLflow API
-        """
-
     def model(self):
         """ Returns the created model """
         return self.model
@@ -52,9 +46,9 @@ class MlModel():
         pickle.dump(self.model, open(path, 'wb'))
         print ("model successfully saved to: {}".format(path))
 
-    def load(self, filename):
+    def load(self, modelname):
         """ laods a trained model """
-        path = self.config["models"]["path"] + filename
-        pickle.loaded_model = pickle.load(open(path, 'rb'))
+        path = self.config["models"]["path"] + modelname
+        self.model = pickle.load(open(path, 'rb'))
         print("model successfully loaded to: {}".format(path))
 

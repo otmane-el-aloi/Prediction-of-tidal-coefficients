@@ -1,0 +1,1 @@
+# TODO create methode to select best model between some well known regressors: SVMR(SCALE), KNNR(SCALE), LSTM(SCALE)

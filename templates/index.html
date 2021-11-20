@@ -1,139 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="style.css" />
-    <title>Tidal prediction</title>
-    {% block head %}{% endblock %}
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
-      <div class="container">
-        <!--<a href="#" class="navbar-brand">Tidal prediction</a>-->
-        <a class="navbar-brand" href="http://codingmoney.com/">
-            <img src="img/logo2Pred.PNG" height="30" alt="">
-          </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navmenu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#About" target="_blank" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#Prediction" class="nav-link">Prediction</a>
-            </li>
-            <li class="nav-item">
-                <a href="#Co-founders" class="nav-link">Co-founders</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    {% block body %}{% endblock %}
-    <!-- Showcase -->
-    <section
-      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
-    >
-      <div class="container">
-        <div class="d-sm-flex align-items-center justify-content-between">
-          <div>
-            <h1>Welcome to <span class="text-warning"> Tidal Prediction </span></h1>
-            <p class="lead my-4">
-              The future is in your hands !
-            </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="style.css" />
+  <title>Tidal prediction</title>
+  {% block head %}{% endblock %}
+</head>
 
-          </div>
-          <a href="https://github.com/otmane-el-aloi/Prediction-of-tidal-coefficients/branches" class="btn btn-primary btn-lg">See project in Github !</a>
-          <!-- 
-          <button
-              class="btn btn-primary btn-lg"
-              data-bs-toggle="modal"
-              data-bs-target="#https://github.com/otmane-el-aloi/Prediction-of-tidal-coefficients"
-            >
-              See project in Github !
-            </button>
-              -->
-        </div>
-      </div>
-    </section>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+    <div class="container">
+      <!--<a href="#" class="navbar-brand">Tidal prediction</a>-->
+      <a class="navbar-brand" href="http://codingmoney.com/">
+        <img src="static/img/logo2Pred.PNG" height="30" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-
-  
-    <!-- carousel -->
-      <!--
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/img1.PNG" class="d-block w-100"  alt="...">
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#About" target="_blank" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Prediction" class="nav-link">Prediction</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Co-founders" class="nav-link">Co-founders</a>
+          </li>
+        </ul>
       </div>
-      <div class="carousel-item">
-        <img src="img/img2.PNG" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/img3.PNG" class="d-block w-100" alt="...">
-      </div>
-   
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-   /carousel -->
-    
-   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  </nav>
+  <!-- Showcase -->
+  <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+    <div class="container">
+      <div class="d-sm-flex align-items-center justify-content-between">
+        <div>
+          <h1>Welcome to <span class="text-warning"> Tidal Prediction </span></h1>
+          <p class="lead my-4">
+            The future is in your hands !
+          </p>
+
+        </div>
+        <a href="https://github.com/otmane-el-aloi/Prediction-of-tidal-coefficients/branches"
+          class="btn btn-primary btn-lg">See project in Github !</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/img1.PNG" class="d-block w-100" alt="..." height="250">
+        <img src="static/img/img1.PNG" class="d-block w-100" alt="..." height="500">
       </div>
       <div class="carousel-item">
-        <img src="img/img2.PNG" class="d-block w-100" alt="..." height="250">
+        <img src="static/img/img2.PNG" class="d-block w-100" alt="..." height="500">
       </div>
       <div class="carousel-item">
-        <img src="img/img3.PNG" class="d-block w-100" alt="..." height="250">
+        <img src="static/img/img3.PNG" class="d-block w-100" alt="..." height="500">
       </div>
       <div class="carousel-item">
-        <img src="img/ML.jpg" class="d-block w-100" alt="..." height="250">
+        <img src="static/img/ML.jpg" class="d-block w-100" alt="..." height="500">
       </div>
       <div class="carousel-item">
-        <img src="img/ML2.jpg" class="d-block w-100" alt="..." height="250">
+        <img src="static/img/ML2.jpg" class="d-block w-100" alt="..." height="500">
       </div>
       <div class="carousel-item">
-        <img src="img/ML3.jpg" class="d-block w-100" alt="..." height="250">
+        <img src="static/img/ML3.jpg" class="d-block w-100" alt="..." height="500">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -154,105 +100,89 @@
       height: 200vh;
       width: 100%;
     "> -->
-    <div>
+  <div>
     <section class=".bg-light text-light p-5">
-     
-    <div class="container" class="d-grid gap-3">
-          <h1><p id="About" class="text-info">About !</p></h1>
-          <p class="text-dark">
-            The objective of our project is the prediction of future tidal coefficient values
-            from measurements obtained in the form of a long temporal sequence (over several years) of
-            (over several years) of dated records of tidal coefficients in the port of Brest,
-            in connection with dated data on the phases of the moon (and thus taking into account the
-            the phases of the solar cycle).
-          </p>
-          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100%;">
-        </div>
-          <h1><p id="Prediction" class="text-info">Prediction !</p></h1>
       <div class="container" class="d-grid gap-3">
-        <div class="d-sm-flex align-items-center justify-content-between">
-        <h1> <span class="text-warning"> From : </span></h1>
-      
-           <div class="col-md-4 col-lg-4">
-            <div class="card bg-light">
-              <div class="card-body text-center">
-               <div class="col">
-                 <input type="text" class="form-control" placeholder="Year">
-               </div>
-               <div class="col">
-                 <input type="text" class="form-control" placeholder="Month">
-               </div>
-               <div class="col">
-                <input type="text" class="form-control" placeholder="Day">
+        <h1>
+          <p id="About" class="text-info">About</p>
+        </h1>
+        <p class="text-dark">
+          The objective of our project is the prediction of future tidal coefficient values
+          from measurements obtained in the form of a long temporal sequence (over several years) of
+          (over several years) of dated records of tidal coefficients in the port of Brest,
+          in connection with dated data on the phases of the moon (and thus taking into account the
+          the phases of the solar cycle).
+        </p>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100%;">
+        </div>
+        <h1>
+          <p id="Prediction" class="text-info">Prediction</p>
+        </h1>
+
+        <!-- Form -->
+        <form method="POST" action="#" method="POST">
+          <!-- First row -->
+          <div class="container" class="d-grid gap-3">
+            <div class="d-sm-flex align-items-center justify-content-between">
+              <h1> <span class="text-info"> From </span></h1>
+              <div class="col-md-4 col-lg-4">
+                <div class="card bg-light">
+                  <div class="card-body text-center">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Year" , name="from_year">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Month" , name="from_month">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Day" , name='from_day'>
+                    </div>
+                  </div>
+                </div>
               </div>
-           </div>
-           </div>
-           </div>
-  
-           <h1> <span class="text-warning"> To : </span></h1>
-    
-           <div class="col-md-4 col-lg-4">
-            <div class="card bg-light">
-              <div class="card-body text-center">
-               <div class="col">
-                 <input type="text" class="form-control" placeholder="Year">
-               </div>
-               <div class="col">
-                 <input type="text" class="form-control" placeholder="Month">
-               </div>
-               <div class="col">
-                <input type="text" class="form-control" placeholder="Day">
+              <!-- Second row -->
+              <h1> <span class="text-info"> To </span></h1>
+              <div class="col-md-4 col-lg-4">
+                <div class="card bg-light">
+                  <div class="card-body text-center">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Year" , name="to_year">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Month" , name="to_month">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Day" , name="to_day">
+                    </div>
+                  </div>
+                </div>
               </div>
-           </div>
-           </div>
-           </div>
-      
+            </div>
+          </div>
+          <!-- Submit button -->
+         <button class="btn btn-primary" type="submit">Predict</button>
+        </form>
+        <p><h1>{{year}}</h1></p>
+
+        <!-- Table-->
+        <table class="table table-striped table-bordered " id="datatable" class="d-grid gap-3">
+          <tr>
+            <th> Date </th>
+            <th> Min coefficient </th>
+            <th> Max coefficient </th>
+          </tr>
+          {% for date, coefs in ziped_result %}
+          <tr>
+            <td>{{date}}</th>
+            <td>{{coefs[0]}}</th>
+            <td>{{coefs[1]}}</th>
+          </tr>
+          {% endfor %}
+
+        </table>
       </div>
-    </div>
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100%;">
-    </div>
 
-    <!-- Table-->     
-
-    <table class="table table-striped table-bordered " id="datatable" class="d-grid gap-3">
-      <tr>
-        <th> Date </th> 
-        <th> Min coefficient </th>
-        <th> Max coefficient </th>               
-      </tr>
-       
-      <tr>
-          <td> 20/11/2021 </td>
-          <td> 60 </td>
-          <td> 67 </td>
-      </tr>
-      <tr>
-        <td> 21/11/2021 </td>
-        <td> 47 </td>
-        <td> 53 </td>
-      </tr>
-      <tr>
-        <td> 22/11/2021 </td>
-        <td> 41 </td>
-        <td> 43 </td>
-      </tr>
-    <tr>
-      <td> 23/11/2021 </td>
-      <td> 40 </td>
-      <td> 41 </td>
-    </tr>
-    <tr>
-      <td> 24/11/2021 </td>
-      <td> 41 </td>
-      <td> 44 </td>
-    </tr>
-    <tr>
-      <td> 25/11/2021 </td>
-      <td> 48 </td>
-      <td> 52 </td>
-    </tr>
-  </table>
-  </div>
+      <!-- Co-Founders -->
       <section id="Co-founders" class="p-5 bg-primary">
         <div class="container">
           <h2 class="text-center text-white">Co-founders</h2>
@@ -263,72 +193,59 @@
             <div class="col-md-6 col-lg-4">
               <div class="card bg-light">
                 <div class="card-body text-center">
-                  <img
-                  class="rounded-circle mb-1"
-                  src="img/Otmane.PNG"
-                  alt=""
-                  width="210" height="195"
-                  />
+                  <img class="rounded-circle mb-1" src="static/img/Otmane.PNG" alt="" width="210" height="195" />
                   <h3 class="text-warning">Otmane EL ALOI</h3>
-                     <p class="text-dark">
+                  <p class="text-dark">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
-                    </p>
+                  </p>
                   <a href="https://www.linkedin.com/in/otmane-elaloi"><i class="bi bi-linkedin text-dark mx-1"></i></a>
                 </div>
               </div>
             </div>
-        
+
             <div class="col-md-6 col-lg-4">
-                <div class="card bg-light">
-                  <div class="card-body text-center">
-                    <img
-                    class="rounded-circle mb-1"
-                    src="img/saoud2.jpeg"
-                    alt=""
-                    width="210" height="195"
-                    />
-                    <h3 class="text-warning">Abdelhafid SAOUD</h3>
-                    <p class="text-dark">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
-                    </p>
-                    <a href="https://www.linkedin.com/in/abdelhafid-saoud-614b25178"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                  </div>
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img class="rounded-circle mb-1" src="static/img/saoud2.jpeg" alt="" width="210" height="195" />
+                  <h3 class="text-warning">Abdelhafid SAOUD</h3>
+                  <p class="text-dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                  </p>
+                  <a href="https://www.linkedin.com/in/abdelhafid-saoud-614b25178"><i
+                      class="bi bi-linkedin text-dark mx-1"></i></a>
                 </div>
               </div>
-         
-              <div class="col-md-6 col-lg-4">
-                <div class="card bg-light">
-                  <div class="card-body text-center">
-                    <img
-                    class="rounded-circle mb-1"
-                    src="img/Ziane.jpeg"
-                    alt=""
-                    width="210" height="195"
-                    />
-                    <h3 class="text-warning">Abdelhadi ZIANE</h3>
-                    <p class="text-dark">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
-                    </p>
-                    <a href="https://www.linkedin.com/in/abdelhadi-ziane"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                  </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <img class="rounded-circle mb-1" src="static/img/Ziane.jpeg" alt="" width="210" height="195" />
+                  <h3 class="text-warning">Abdelhadi ZIANE</h3>
+                  <p class="text-dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                  </p>
+                  <a href="https://www.linkedin.com/in/abdelhadi-ziane"><i
+                      class="bi bi-linkedin text-dark mx-1"></i></a>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-    </div>
-    </div>   
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        </div>
+      </section>
+  </div>
+  </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 
 
 
-    <!-- Contact & Map 
+  <!-- Contact & Map 
 <section class="p-5">
     <div class="container">
       <div class="row g-4">
@@ -373,23 +290,12 @@
   </footer>
 
   <!-- Modal -->
-  <div
-    class="modal fade"
-    id="enroll"
-    tabindex="-1"
-    aria-labelledby="enrollLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="enrollLabel">Enrollment</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p class="lead">Fill out this form and we will get back to you</p>
@@ -415,11 +321,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Close
           </button>
           <button type="button" class="btn btn-primary">Submit</button>
@@ -428,21 +330,20 @@
     </div>
   </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-    crossorigin="anonymous"
-  ></script>
+    crossorigin="anonymous"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
   <script>
     mapboxgl.accessToken =
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYWJkZWxoYWZpZDk5IiwiYSI6ImNrdzEzN29zbWJiZnIycHF3eWoyNDkwYmkifQ.uuAoTHsD81jkGnbYlUV1JQ';
+      mapboxgl.accessToken = 'pk.eyJ1IjoiYWJkZWxoYWZpZDk5IiwiYSI6ImNrdzEzN29zbWJiZnIycHF3eWoyNDkwYmkifQ.uuAoTHsD81jkGnbYlUV1JQ';
     var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-71.060982, 42.35725],
-    zoom: 5,
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-71.060982, 42.35725],
+      zoom: 5,
     });
   </script>
 </body>
+
 </html>

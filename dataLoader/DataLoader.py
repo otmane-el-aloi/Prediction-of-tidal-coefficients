@@ -159,7 +159,7 @@ class DataLoader():
         self.data['year']= self.data["date"].apply(lambda x: x.year)
         self.data.drop(["date"], axis=1, inplace=True)
         print("Date-Time features added with sucess!")
-
+    
     def splitDataSet(self, past_values = 14, step = 14):
         """ This method splits data into train and test
         :past_values: int indicating how many past values you want the model to see

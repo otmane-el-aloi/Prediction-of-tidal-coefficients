@@ -1,45 +1,44 @@
 # External
 import pandas as pd
-from flask import Flask, render_template, jsonify, request, url_for
+import numpy as np
+from flask import Flask, render_template, request 
 
 # Internal
 from models.RfModel import RFModel
-
-
+from dataLoader.DataPredictionCreator import DataPredictionCreator
 
 app = Flask(__name__)
 
 @app.route("/", methods = ["GET", "POST"])
 def hello():
-    return render_template("index.html")
+    if request.method == "POST":
+        # Get data from the request
+        from_year = int(request.form.get("from_year"))
+        from_month = int(request.form.get("from_month"))
+        from_day = int(request.form.get("from_day"))
+        to_year = int(request.form.get("to_year"))
+        to_month = int(request.form.get("to_month"))
+        to_day = int(request.form.get("to_day"))
 
-# @app.route("/predict", methods=['POST'])
-# def predict():
-#     try:
-#         test_json = request.get_json()
-#         test = pd.read_json(test_json, orient='records')
-#         test['dateTime'] = pd.to_datetime(test['dateTime'])
+        # Create data for the model
+        df, dates = DataPredictionCreator().createData(from_year, from_month, from_day, to_year, to_month, to_day)
 
-#         # Getting previous coefficients
-#         previous_coef = test["coef"].values
-    
-#     except Exception as e:
-#         raise e
+        # Load the model
+        RF = RFModel({"n_estimators":100})
+        RF.load("RF_custom_features_two_target_best.pk")
 
-#     # load model 
-#     RF = RFModel()
-#     RF.load("RF_model")
-#     model = RF.model
+        # Make prediction 
+        y_predicted = RF.predict(df)
 
-#     # Making prediction 
-#     predicted_future_coef = model.predict(previous_coef)
+        # Getting only integer format
+        y_predicted = np.array(list(map(lambda l: [int(l[0]), int(l[1])], y_predicted.tolist())))
 
-#     # Transform to json
-#     predicted_future_coef_df = pd.DataFrame(predicted_future_coef, columns = ["coef"])
-#     response = jsonify(predictions=predicted_future_coef_df.to_json(orient="records"))
-#     return response, 200
+        ziped_result = zip(dates, y_predicted)
 
-
+        # Write data back to table
+        return render_template("index.html", ziped_result = ziped_result)
+    else :
+        return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")

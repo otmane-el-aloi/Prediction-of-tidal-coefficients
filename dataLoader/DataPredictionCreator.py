@@ -52,7 +52,7 @@ class  DataPredictionCreator:
         # Generating dates betwwen the entered dates
         sdate = dt.date(from_year,from_month,from_day)   # start date
         edate = dt.date(to_year, to_month, to_day)   # end date
-        dates = pd.date_range(sdate,edate-dt.timedelta(days=1),freq='d').to_list()
+        dates = pd.date_range(sdate,edate,freq='d').to_list()
         dates = list(map(lambda x : x.date(), dates))
         
         # Creating data Frame conataining a column of dates

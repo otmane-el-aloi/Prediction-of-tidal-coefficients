@@ -11,7 +11,6 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="style.css" />
   <title>Tidal prediction</title>
-  {% block head %}{% endblock %}
 </head>
 
 <body>
@@ -45,7 +44,7 @@
   </nav>
   <!-- Showcase -->
   <div>
-  <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+  <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 mt-5 text-center text-sm-start">
     <div class="container">
       <div class="d-sm-flex align-items-center justify-content-between">
         <div>
@@ -93,14 +92,6 @@
     </button>
   </div>
 
-  <!--
-    <div
-    class="bg-image"
-    style="
-      background-image: url('img/background.jpg');
-      height: 200vh;
-      width: 100%;
-    "> -->
   <div>
     <section class=".bg-light text-light p-5">
       <div class="container" class="d-grid gap-3">
@@ -129,15 +120,7 @@
               <div class="col-md-4 col-lg-4">
                 <div class="card bg-light">
                   <div class="card-body text-center">
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Year" , name="from_year">
-                    </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Month" , name="from_month">
-                    </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Day" , name='from_day'>
-                    </div>
+                    <input type = "date" name = "from_date">
                   </div>
                 </div>
               </div>
@@ -146,15 +129,7 @@
               <div class="col-md-4 col-lg-4">
                 <div class="card bg-light">
                   <div class="card-body text-center">
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Year" , name="to_year">
-                    </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Month" , name="to_month">
-                    </div>
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Day" , name="to_day">
-                    </div>
+                    <input type = "date" name = "to_date">
                   </div>
                 </div>
               </div>

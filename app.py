@@ -2,10 +2,12 @@
 import pandas as pd
 import numpy as np
 from flask import Flask, render_template, request 
+from datetime import datetime
 
 # Internal
 from models.RfModel import RFModel
 from dataLoader.DataPredictionCreator import DataPredictionCreator
+
 
 app = Flask(__name__)
 
@@ -13,12 +15,19 @@ app = Flask(__name__)
 def hello():
     if request.method == "POST":
         # Get data from the request
-        from_year = int(request.form.get("from_year"))
-        from_month = int(request.form.get("from_month"))
-        from_day = int(request.form.get("from_day"))
-        to_year = int(request.form.get("to_year"))
-        to_month = int(request.form.get("to_month"))
-        to_day = int(request.form.get("to_day"))
+        from_date = datetime. strptime(
+                     request.form['from_date'],
+                     '%Y-%m-%d')
+        from_year = int(from_date.year)
+        from_month = int(from_date.month)
+        from_day = int(from_date.day)
+
+        to_date = datetime.strptime(
+                     request.form['to_date'],
+                     '%Y-%m-%d')
+        to_year = int(to_date.year)
+        to_month = int(to_date.month)
+        to_day = int(to_date.day)
 
         # Create data for the model
         df, dates = DataPredictionCreator().createData(from_year, from_month, from_day, to_year, to_month, to_day)

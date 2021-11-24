@@ -6,15 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="./index.js"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="static/js/main.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="style.css" />
   <title>Tidal prediction</title>
-  {% block head %}{% endblock %}
 </head>
 
 <body>
@@ -35,7 +34,7 @@
             <a href="#home" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#About" target="_blank" class="nav-link">About</a>
+            <a href="#About1" target="_blank" class="nav-link">About</a>
           </li>
           <li class="nav-item">
             <a href="#Tidals" target="_blank" class="nav-link">Tidals</a>
@@ -102,44 +101,51 @@
     <section class=".bg-light text-light p-5">
       <div class="container" class="d-grid gap-3">
         <h1>
-          <p id="About" class="text-info">About</p>
+          <p id="About1" class="text-info"><U><I>About</I></U></p>
         </h1>
-        <p class="text-dark">
-          The objective of our project is the prediction of future tidal coefficient values
-          from measurements obtained in the form of a long temporal sequence (over several years) of
-          (over several years) of dated records of tidal coefficients in the port of Brest,
-          in connection with dated data on the phases of the moon (and thus taking into account the
-          the phases of the solar cycle).
-        </p>
+        <div class="row g-4">
+          <div class="col-md">
+            <p class="text-dark" style="width: 25rem;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda accusamus nobis sed cupiditate iusto? Quibusdam. </p>
+          </div>
+          <div class="col-md">
+            <p class="text-dark" style="width: 25rem;">
+              The objective of our project is the prediction of future tidal coefficient values
+              from measurements obtained in the form of a long temporal sequence (over several years) of
+              (over several years) of dated records of tidal coefficients in the port of Brest,
+              in connection with dated data on the phases of the moon (and thus taking into account the
+              the phases of the solar cycle).
+            </p>
+          </div>
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100%;">
         </div>
         <!--Tidals-->
-            <div class="row g-4">
-              <h1>
-                <p id="Tidals" class="text-info center mb-4">Tidals</p>
-              </h1>
-              <div class="col-md">
-                <p class="text-dark" style="width: 25rem;">   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam. </p>    
-              </div>
-              <div class="col-md">
-                <iframe src="https://giphy.com/embed/JidwhuCLt3u5sXimzc" width="400" height="200" frameBorder="0" class="giphy-embed"> </iframe>
-                  <p class="text-dark" style="width: 25rem;">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
-              
-                </p>
-              </div>
-            </div>
+        <div class="row g-4">
+          <h1>
+            <p id="Tidals" class="text-info center mb-4"><U><I>Tidals</I></U></p>
+          </h1>
+          <div class="col-md">
+            <p class="text-dark" style="width: 25rem;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda accusamus nobis sed cupiditate iusto? Quibusdam. </p>
+          </div>
+          <div class="col-md">
+            <iframe src="https://giphy.com/embed/JidwhuCLt3u5sXimzc" width="400" height="200" frameBorder="0"
+              class="giphy-embed"> </iframe>
+            <p class="text-dark" style="width: 25rem;">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
 
-
-
+            </p>
+          </div>
+        </div>
         <h1>
-          <p id="Prediction" class="text-info">Prediction</p>
+          <p id="Prediction" class="text-info"><U><I>Prediction</I></U></p>
         </h1>
 
         <!-- Form -->
@@ -189,10 +195,12 @@
             </div>
           </div>
           <!-- Submit button -->
-         <button class="btn btn-primary" type="submit">Predict</button>
-         <script src="extensions/export/bootstrap-table-export.js"></script>
+          <button class="btn btn-primary" type="submit">Predict</button>
+          <script src="extensions/export/bootstrap-table-export.js"></script>
         </form>
-        <p><h1>{{year}}</h1></p>
+        <p>
+        <h1>{{year}}</h1>
+        </p>
 
         <!-- Table-->
         <table class="table table-striped table-bordered " id="datatable" class="d-grid gap-3">
@@ -210,21 +218,21 @@
           {% endfor %}
           <!--Export-->
           <tr>
-          <td colspan="2">
+            <td colspan="2">
               <button onclick="window.open('data:application/vnd.ms-excel,'+document.documentElement.innerHTML);">
-                  Get as Excel spreadsheet
+                Get as Excel spreadsheet
               </button>
             </td>
           </tr>
 
         </table>
       </div>
-      
+
 
       <!-- Co-Founders -->
       <section id="Co-founders" class="p-5 bg-primary">
         <div class="container">
-          <h2 class="text-center text-white">Co-founders</h2>
+          <h2 class="text-center text-white"><U><I>Co-founders</I></U></h2>
           <p class="lead text-center text-white mb-5">
             All in the last year Computer Science Engineering at Central school of Nantes
           </p>
@@ -283,7 +291,7 @@
     crossorigin="anonymous"></script>
 
   <!-- Map -->
-<section class="p-5">
+  <section class="p-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-md">
@@ -294,20 +302,24 @@
           Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
         </div>
         <div class="col-md">
-          <div id="map" width="210" height="195" ></div>
-          <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+          <div id="map">
+            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly"
+              async></script>
+          </div>
+          <!--<div id="map" width="210" height="195" ></div>
            <script
            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly&language=ja&region=JP"
             async
             ></script>
-            <div id="map"></div> 
+            <div id="map"></div> -->
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Footer -->
-  
+
   <footer class="p-5 bg-dark text-white text-center position-relative">
     <div class="container">
       <p class="lead">Copyright &copy; 2022 Tidal prediction</p>
@@ -317,7 +329,7 @@
       </a>
     </div>
   </footer>
-  
+
 
   <!-- Modal -->
   <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">

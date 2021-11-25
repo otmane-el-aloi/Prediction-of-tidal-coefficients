@@ -1,9 +1,7 @@
 # External
-from pickle import FALSE
 import pandas as pd
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import TimeSeriesSplit
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import mean_squared_error
 import mlflow.sklearn
 

@@ -8,6 +8,7 @@ from datetime import datetime
 from models.RfModel import RFModel
 from dataLoader.DataPredictionCreator import DataPredictionCreator
 
+
 app = Flask(__name__)
 
 @app.route("/", methods = ["GET", "POST"])

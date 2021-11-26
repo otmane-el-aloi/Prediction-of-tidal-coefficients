@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <link rel="stylesheet" type="text/css" href="./style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-  <link rel="stylesheet" href="static/css/main.css" />
-  <title>Tidal prediction</title>
-  <script src="static/js/main.js"></script>
-</head> -->
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -26,6 +10,9 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="static/css/main.css" />
   <script src="static/js/main.js"></script>
+
+  <!-- dev icon css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 
   <title>Tidal Prediction</title>
 </head>
@@ -67,14 +54,14 @@
     <div class="container">
       <div class="d-sm-flex align-items-center justify-content-between">
         <div>
-          <h1 class="text-white">Welcome to <span class="text-primary"> Tidal Prediction </span></h1>
+          <h1 class="text-white">Welcome to <span class="text-warning"> Tidal Prediction </span></h1>
           <p class="lead my-4 mt-1">
             The future is in your hands !
           </p>
 
         </div>
         <a href="https://github.com/otmane-el-aloi/Prediction-of-tidal-coefficients/branches"
-          class="btn btn-primary btn-lg">See project in Github !</a>
+          class="btn btn-warning btn-lg">See project in Github !</a>
       </div>
     </div>
   </section>
@@ -83,22 +70,13 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="static/img/img1.PNG" class="d-block w-100" alt="..." height="500">
+        <img src="static/img/img1.PNG" class="d-block w-100" alt="..." height="600">
       </div>
       <div class="carousel-item">
-        <img src="static/img/img2.PNG" class="d-block w-100" alt="..." height="500">
+        <img src="static/img/img2.PNG" class="d-block w-100" alt="..." height="600">
       </div>
       <div class="carousel-item">
-        <img src="static/img/img3.PNG" class="d-block w-100" alt="..." height="500">
-      </div>
-      <div class="carousel-item">
-        <img src="static/img/ML.jpg" class="d-block w-100" alt="..." height="500">
-      </div>
-      <div class="carousel-item">
-        <img src="static/img/ML2.jpg" class="d-block w-100" alt="..." height="500">
-      </div>
-      <div class="carousel-item">
-        <img src="static/img/ML3.jpg" class="d-block w-100" alt="..." height="500">
+        <img src="static/img/img3.PNG" class="d-block w-100" alt="..." height="600">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -116,8 +94,11 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
-          <h6 class="text-primary">ABOUT</h6>
-          <h1>This project</h1>
+          <h1 class="text-dark">A<span class="text-warning">B</span>OUT</h1>
+          <div class="text-warning subtitle">
+            <h6>This project</h6>
+          </div>
+          
           <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque fuga
             in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
         </div>
@@ -130,8 +111,11 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
-          <h6 class="text-primary">ABOUT</h6>
-          <h1>Tides</h1>
+          <h1 class="text-dark">A<span class="text-warning">B</span>OUT</h6>
+          <div class="subtitle">
+            <h6>Tides</h6>
+          </div>
+          
           <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque fuga
             in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
         </div>
@@ -144,11 +128,35 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-8 mx-auto text-center">
-            <h6 class="text-primary">STACK</h6>
-            <h1>Built with</h1>
+            <h1 class="text-dark">S<span class="text-warning">T</span>ACK</h1>
+            <div class="subtitle">
+              <h6>Built with</h6>
+            </div>
             <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque fuga
               in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
           </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mb-3 justify-content-center ">
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" /></div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" /></div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></div>
         </div>
       </div>
   </section><!-- Tidals -->
@@ -158,39 +166,40 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
-          <h6 class="text-primary">Prediction</h6>
-          <h1>Tidal coefficients prediction</h1>
+          <h1 class="text-dark">P<span class="text-warning">R</span>EDICTION</h1>
+          <div class="subtitle">
+            <h6>Tidal coefficients prediction</h6>
+          </div>
+          
           <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque fuga
             in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
         </div>
       </div>
-      <div class="row mb-5">
         <form method="POST" action="#" method="POST">
           <!-- First row -->
-          <div class="d-flex justify-content-between">
-            <div class="col-md-2 col-lg-4">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-5 col-sm-12">
               <label for="from_date">Starting date </label>
               <input type="date" name="from_date" id="from_date">
             </div>
             <!-- Second row -->
-            <div class="col-md-2 col-lg-4">
+            <div class="col-lg-4 col-md-5 col-md-12">
               <label for="to_date">Ending date</label>
               <input type="date" name="to_date" id="to_date">
             </div>
             <!-- Submit button -->
-            <div class="col-md-2 col-lg-4">
+            <div class="mx-auto my-auto col-lg-4 col-md-2">
               <button class="glow-on-hover" type="submit">Predict</button>
             </div>
           </div>
         </form>
       </div>
-    </div>
   </section>
   <!-- Prediction -->
 
   <!-- Table-->
   <section id="section">
-    <div class="mx-auto col-sm-3  col-md-6 col-lg-8">
+    <div class="mx-auto col-sm-6  col-md-6 col-lg-8">
       <table class="styled-table table table-sm " id="dataTable" class="d-grid gap-3">
         <thead>
           <tr>

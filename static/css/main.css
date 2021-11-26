@@ -35,6 +35,10 @@ section {
     padding-bottom: 100px;
 }
 
+.stack{
+    width: 10%;
+    height: 10%;
+}
 .subtitle{
     margin:auto;
     width: 30%;
@@ -155,4 +159,8 @@ section {
 }
 
 
-/* image */
+/* Form */
+form{
+    display: flex;
+    flex-direction: row;
+}

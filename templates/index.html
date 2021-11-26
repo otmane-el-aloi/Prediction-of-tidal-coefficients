@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="static/css/main.css" />
   <script src="static/js/main.js"></script>
 
+  <!-- dev icon css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+
   <title>Tidal Prediction</title>
 </head>
 
@@ -67,22 +70,13 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="static/img/img1.PNG" class="d-block w-100" alt="..." height="500">
+        <img src="static/img/img1.PNG" class="d-block w-100" alt="..." height="600">
       </div>
       <div class="carousel-item">
-        <img src="static/img/img2.PNG" class="d-block w-100" alt="..." height="500">
+        <img src="static/img/img2.PNG" class="d-block w-100" alt="..." height="600">
       </div>
       <div class="carousel-item">
-        <img src="static/img/img3.PNG" class="d-block w-100" alt="..." height="500">
-      </div>
-      <div class="carousel-item">
-        <img src="static/img/ML.jpg" class="d-block w-100" alt="..." height="500">
-      </div>
-      <div class="carousel-item">
-        <img src="static/img/ML2.jpg" class="d-block w-100" alt="..." height="500">
-      </div>
-      <div class="carousel-item">
-        <img src="static/img/ML3.jpg" class="d-block w-100" alt="..." height="500">
+        <img src="static/img/img3.PNG" class="d-block w-100" alt="..." height="600">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -101,7 +95,7 @@
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
           <h1 class="text-dark">A<span class="text-warning">B</span>OUT</h1>
-          <div class="subtitle">
+          <div class="text-warning subtitle">
             <h6>This project</h6>
           </div>
           
@@ -143,6 +137,28 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="row mb-3 justify-content-center ">
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" /></div>
+        </div>
+        <div class="row mb-3 justify-content-center">
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" /></div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original-wordmark.svg" /></div>
+          <div class="stack col-lg-2 col-sm-6"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></div>
+        </div>
+      </div>
   </section><!-- Tidals -->
 
   <!--Prediction-->
@@ -150,7 +166,7 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
-          <h1 class="text-dark"><span class="text-warning">P</span>rediction</h1>
+          <h1 class="text-dark">P<span class="text-warning">R</span>EDICTION</h1>
           <div class="subtitle">
             <h6>Tidal coefficients prediction</h6>
           </div>
@@ -159,33 +175,31 @@
             in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
         </div>
       </div>
-      <div class="row mb-5">
         <form method="POST" action="#" method="POST">
           <!-- First row -->
-          <div class="d-flex justify-content-between">
-            <div class="col-md-2 col-lg-4">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-5 col-sm-12">
               <label for="from_date">Starting date </label>
               <input type="date" name="from_date" id="from_date">
             </div>
             <!-- Second row -->
-            <div class="col-md-2 col-lg-4">
+            <div class="col-lg-4 col-md-5 col-md-12">
               <label for="to_date">Ending date</label>
               <input type="date" name="to_date" id="to_date">
             </div>
             <!-- Submit button -->
-            <div class="col-md-2 col-lg-4">
+            <div class="mx-auto my-auto col-lg-4 col-md-2">
               <button class="glow-on-hover" type="submit">Predict</button>
             </div>
           </div>
         </form>
       </div>
-    </div>
   </section>
   <!-- Prediction -->
 
   <!-- Table-->
   <section id="section">
-    <div class="mx-auto col-sm-3  col-md-6 col-lg-8">
+    <div class="mx-auto col-sm-6  col-md-6 col-lg-8">
       <table class="styled-table table table-sm " id="dataTable" class="d-grid gap-3">
         <thead>
           <tr>

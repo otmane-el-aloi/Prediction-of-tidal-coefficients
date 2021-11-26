@@ -34,10 +34,10 @@
             <a href="#home" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#about" target="_blank" class="nav-link">About</a>
+            <a href="#About" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#Tidals" target="_blank" class="nav-link">Tidals</a>
+            <a href="#Tides" class="nav-link">Tides</a>
           </li>
           <li class="nav-item">
             <a href="#Prediction" class="nav-link">Prediction</a>
@@ -51,7 +51,7 @@
   </nav>
   <!-- Showcase -->
   <section id="section" class="bg-dark text-light p-5 p-lg-0 pt-lg-5 mt-5 text-center text-sm-start">
-    <div class="container">
+    <div id="home" class="container">
       <div class="d-sm-flex align-items-center justify-content-between">
         <div>
           <h1 class="text-white">Welcome to <span class="text-warning"> Tidal Prediction </span></h1>
@@ -91,7 +91,7 @@
 
   <!-- About -->
   <section id="section about">
-    <div class="container">
+    <div id="About" class="container">
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
           <h1 class="text-dark">A<span class="text-warning">B</span>OUT</h1>
@@ -108,7 +108,7 @@
 
   <!--Tidals-->
   <section id="section">
-    <div class="container">
+    <div id="Tides" class="container">
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
           <h1 class="text-dark">A<span class="text-warning">B</span>OUT</h6>
@@ -163,7 +163,7 @@
 
   <!--Prediction-->
   <section id="section">
-    <div class="container">
+    <div id="Prediction" class="container">
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
           <h1 class="text-dark">P<span class="text-warning">R</span>EDICTION</h1>
@@ -183,12 +183,12 @@
               <input type="date" name="from_date" id="from_date">
             </div>
             <!-- Second row -->
-            <div class="col-lg-4 col-md-5 col-md-12">
+            <div class="col-lg-4 col-sm-5 col-sm-12">
               <label for="to_date">Ending date</label>
               <input type="date" name="to_date" id="to_date">
             </div>
             <!-- Submit button -->
-            <div class="mx-auto my-auto col-lg-4 col-md-2">
+            <div class="mx-auto my-auto col-sm-6 col-md-2">
               <button class="glow-on-hover" type="submit">Predict</button>
             </div>
           </div>
@@ -196,7 +196,6 @@
       </div>
   </section>
   <!-- Prediction -->
-
   <!-- Table-->
   <section id="section">
     <div class="mx-auto col-sm-6  col-md-6 col-lg-8">
@@ -218,14 +217,21 @@
           {% endfor %}
         </tbody>
       </table>
+      <tr >
+        <td colspan="2">
+          <button class="glow-on-hover" onclick="window.open('data:application/vnd.ms-excel,'+document.documentElement.innerHTML);">
+              Get as Excel spreadsheet !
+          </button>
+        </td>
+      </tr>
     </div>
   </section>
 
 
   <!-- Co-Founders -->
   <section id="section">
-    <div class="container">
-      <h2 class="text-center mb-3">Co-founders</h2>
+    <div id="Co-founders" class="container">
+      <h2  class="text-center mb-3">Co-founders</h2>
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
           <div class="card bg-light">
@@ -236,7 +242,9 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
               </p>
-              <a href="https://www.linkedin.com/in/otmane-elaloi"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="https://www.linkedin.com/in/otmane-elaloi"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg> <i class="bi bi-linkedin text-dark mx-1"></i></a>
             </div>
           </div>
         </div>
@@ -250,8 +258,9 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
               </p>
-              <a href="https://www.linkedin.com/in/abdelhafid-saoud-614b25178"><i
-                  class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="https://www.linkedin.com/in/abdelhafid-saoud-614b25178"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg></a>
             </div>
           </div>
         </div>
@@ -265,7 +274,9 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
               </p>
-              <a href="https://www.linkedin.com/in/abdelhadi-ziane"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="https://www.linkedin.com/in/abdelhadi-ziane"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg><i class="bi bi-linkedin text-dark mx-1"></i></a>
             </div>
           </div>
         </div>

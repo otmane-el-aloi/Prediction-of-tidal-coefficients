@@ -10,6 +10,7 @@ from dataLoader.DataPredictionCreator import DataPredictionCreator
 
 
 app = Flask(__name__)
+index_html = "index.html"
 
 @app.route("/", methods = ["GET", "POST"])
 def hello():
@@ -32,7 +33,7 @@ def hello():
             # Create data for the model
             df, dates = DataPredictionCreator().createData(from_year, from_month, from_day, to_year, to_month, to_day)
         except:
-            return render_template("index.html")
+            return render_template(index_html)
 
         # Load the model
         RF = RFModel({"n_estimators":100})
@@ -47,9 +48,9 @@ def hello():
         ziped_result = zip(dates, y_predicted)
 
         # Write data back to table
-        return render_template("index.html", ziped_result = ziped_result)
+        return render_template(index_html, ziped_result = ziped_result)
     else :
-        return render_template("index.html")
+        return render_template(index_html)
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")

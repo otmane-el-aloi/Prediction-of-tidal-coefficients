@@ -1,19 +1,17 @@
 # External
 import pandas as pd
 import numpy as np
-from flask import Flask, render_template, request 
+from flask import render_template, request 
 from datetime import datetime
 
 # Internal
+from app import app
 from models.RfModel import RFModel
 from dataLoader.DataPredictionCreator import DataPredictionCreator
 
-
-app = Flask(__name__)
 index_html = "index.html"
-
 @app.route("/", methods = ["GET", "POST"])
-def hello():
+def index():
     if request.method == "POST":
         # Get data from the request
         try :
@@ -51,6 +49,3 @@ def hello():
         return render_template(index_html, ziped_result = ziped_result)
     else :
         return render_template(index_html)
-
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")

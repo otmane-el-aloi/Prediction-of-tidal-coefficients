@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -11,11 +14,11 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="static/css/main.css" />
   <script src="static/js/main.js"></script>
-
   <!-- dev icon css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-
+  <script src="static/js/table2excel.js"></script>
   <title>Tidal Prediction</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -37,7 +40,7 @@
             <a href="#About" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#Tides" class="nav-link">Tides</a>
+            <a href="#Stack" class="nav-link">Stack</a>
           </li>
           <li class="nav-item">
             <a href="#Prediction" class="nav-link">Prediction</a>
@@ -141,7 +144,7 @@
 
   <!--Stack-->
   <section id="section">
-    <div class="container">
+    <div id="Stack" class="container">
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
           <h1 class="text-dark">S<span class="text-warning">T</span>ACK</h1>
@@ -196,8 +199,9 @@
   </section><!-- Tidals -->
 
   <!--Prediction-->
+  
   <section id="section">
-    <div class="container">
+    <div id="Prediction" class="container">
       <div class="row mb-5">
         <div class="col-md-8 mx-auto text-center">
           <h1 class="text-dark">P<span class="text-warning">R</span>EDICTION</h1>
@@ -232,7 +236,7 @@
     </div>
   </section>
   <!-- Prediction -->
-
+  
   <!-- Table-->
   <section id="section">
     <div class="mx-auto col-sm-6  col-md-6 col-lg-8">
@@ -254,10 +258,53 @@
           {% endfor %}
         </tbody>
       </table>
-    </div>
+      <button class="glow-on-hover" type="submit" id="export">Export to excel</button>
+
+      <script>
+        var table2excel = new Table2Excel();
+  
+        document.getElementById('export').addEventListener('click', function() {
+          table2excel.export(document.querySelectorAll('table'));
+        });
+      </script>
+    </div>  
+  
+  <div style = "width : 75%" class="mx-auto col-sm-6  col-md-6 col-lg-8"></div>>
+    <canvas id="myChart"></canvas>
+  </div>
+  <script> 
+     const labels ;
+     const data2 ;
+      for (date , coefs in (ziped_result))
+
+        labels.append(date) 
+        data2.append(coefs) 
+
+      endfor 
+  
+    const data = {
+      labels:labels,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: data2,
+      }]
+    };
+  
+    const config = {
+      type: 'line',
+      data: data,
+      options: {}
+    };
+  </script>
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
   </section>
-
-
   <!-- Co-Founders -->
   <section id="section">
     <div id="Co-founders" class="container">

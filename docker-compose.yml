@@ -2,15 +2,17 @@ version: "3.7"
 
 services:
 
+  # the flask app
   flask:
     build: ./flask
-    container_name: PALL
+    container_name: flask
     restart: always
     environment:
       - APP_NAME=tidal-predicition
     expose:
       - 8080
 
+  # the nginx web server
   nginx:
     build: ./nginx
     container_name: nginx

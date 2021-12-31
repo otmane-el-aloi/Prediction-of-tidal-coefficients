@@ -9,6 +9,8 @@ from app import app
 from models.RfModel import RFModel
 from dataLoader.DataPredictionCreator import DataPredictionCreator
 
+import os 
+
 index_html = "index.html"
 @app.route("/", methods = ["GET", "POST"])
 def index():
@@ -33,6 +35,11 @@ def index():
         except:
             return render_template(index_html)
 
+        # test 
+        print("*"*10)
+        print(os.getcwd())
+        print("*"*10)
+        
         # Load the model
         RF = RFModel({"n_estimators":100})
         RF.load("RF_custom_features_two_target_best.pk")

@@ -1,0 +1,26 @@
+# vscodeStuff
+.vscode/
+
+# pythonCache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# mlflowLogs
+mlruns/
+
+# traingFiles
+train_RF_custom_features.py
+train_RF_two_targets.py
+train_RF.py
+
+# noteBooks
+dataAnalysisOtmane.ipynb
+featureEngineering.ipynb
+
+# readmeFile
+README.md
+
+# dataFile
+data/

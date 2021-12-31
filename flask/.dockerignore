@@ -10,9 +10,6 @@ __pycache__/
 # mlflowLogs
 mlruns/
 
-# nonUsefullModels
-trainedModels/RF_custom_features_best.pk
-
 # traingFiles
 train_RF_custom_features.py
 train_RF_two_targets.py

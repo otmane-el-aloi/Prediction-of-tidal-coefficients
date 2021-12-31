@@ -6,6 +6,6 @@ CFG = {
         "path": "./flask/data/original_data/"
     },
     "models":{
-        "path":"./flask/trainedModels/"
+        "path":"./trainedModels/"
     }
 }

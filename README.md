@@ -8,17 +8,8 @@ As a part of an application project during our final year @ Ecole Centrale de Na
 ## DISCLAIMER ⚠️
 This is a POC(Proof of concept) kind-of project.
 
-## MOTIVATION 💪
-
-## DATA SOURCE 📊
-
 ### MODEL SOURCE :deciduous_tree: 
 https://drive.google.com/drive/folders/1nC86M9P1r_Cmpr4YLKAKk1DV2r76wu_c?usp=sharing
-
-
-## Notebooks 📓
-- #### Exploratory data analysis:
-- #### Feature engineering:
 
 # Built with 🛠️
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png"></code>
@@ -40,16 +31,10 @@ https://drive.google.com/drive/folders/1nC86M9P1r_Cmpr4YLKAKk1DV2r76wu_c?usp=sha
 
 ## DEPLOYMENT 🚀
 
-#### Deployment is done using 
-#### This website is deployed at 
-#### You can access it 
-
-## How to use 
+#### Deployment is done using nginx web server and uWsgi application server
 
 ## DEMO 
-
-## Usage 
-You can use this project for further developing it and adding your work in it. If you use this project, kindly mention the original source of the project and mention the link of this repo in your report.
+(coming soon!)
 
 ## Further Improvements 📈
 

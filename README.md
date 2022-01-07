@@ -16,7 +16,6 @@ https://drive.google.com/drive/folders/1nC86M9P1r_Cmpr4YLKAKk1DV2r76wu_c?usp=sha
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code>
 <code><img height="30" src="https://github.com/tomchen/stack-icons/raw/master/logos/bootstrap.svg"></code>
-<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code>
 
 <code><img height="30" src="https://raw.githubusercontent.com/numpy/numpy/7e7f4adab814b223f7f917369a72757cd28b10cb/branding/icons/numpylogo.svg"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/pandas-dev/pandas/761bceb77d44aa63b71dda43ca46e8fd4b9d7422/web/pandas/static/img/pandas.svg"></code>
@@ -39,7 +38,15 @@ https://drive.google.com/drive/folders/1nC86M9P1r_Cmpr4YLKAKk1DV2r76wu_c?usp=sha
 
 ## Further Improvements 📈
 
-## License 📝
-
 ## Contact 📞
+- EL ALOI Otmane: <a href="https://www.linkedin.com/in/otmane-elaloi/" target="_blank">
+  <img align="left" alt="Otmanes's Linkdein" width="25px" src="https://image.flaticon.com/icons/png/512/174/174857.png"/>
+</a>
 
+- SAOUD Abdelhafid: <a href="https://www.linkedin.com/in/abdelhafid-saoud-614b25178/" target="_blank">
+  <img align="left" alt="Saouds's Linkdein" width="25px" src="https://image.flaticon.com/icons/png/512/174/174857.png"/>
+</a>
+
+- ZIANE Abdelhadi: <a href="https://www.linkedin.com/in/abdelhadi-ziane/" target="_blank">
+  <img align="left" alt="Saouds's Linkdein" width="25px" src="https://image.flaticon.com/icons/png/512/174/174857.png"/>
+</a> 

@@ -39,14 +39,14 @@ https://drive.google.com/drive/folders/1nC86M9P1r_Cmpr4YLKAKk1DV2r76wu_c?usp=sha
 ## Further Improvements 📈
 
 ## Contact 📞
-- EL ALOI Otmane: <a href="https://www.linkedin.com/in/otmane-elaloi/" target="_blank">
+- EL ALOI Otmane <a href="https://www.linkedin.com/in/otmane-elaloi/" target="_blank">
   <img align="left" alt="Otmanes's Linkdein" width="25px" src="https://image.flaticon.com/icons/png/512/174/174857.png"/>
 </a>
 
-- SAOUD Abdelhafid: <a href="https://www.linkedin.com/in/abdelhafid-saoud-614b25178/" target="_blank">
+- SAOUD Abdelhafid <a href="https://www.linkedin.com/in/abdelhafid-saoud-614b25178/" target="_blank">
   <img align="left" alt="Saouds's Linkdein" width="25px" src="https://image.flaticon.com/icons/png/512/174/174857.png"/>
 </a>
 
-- ZIANE Abdelhadi: <a href="https://www.linkedin.com/in/abdelhadi-ziane/" target="_blank">
+- ZIANE Abdelhadi <a href="https://www.linkedin.com/in/abdelhadi-ziane/" target="_blank">
   <img align="left" alt="Saouds's Linkdein" width="25px" src="https://image.flaticon.com/icons/png/512/174/174857.png"/>
 </a> 

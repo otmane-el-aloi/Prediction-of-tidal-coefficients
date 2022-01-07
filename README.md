@@ -32,6 +32,7 @@ https://drive.google.com/drive/folders/1nC86M9P1r_Cmpr4YLKAKk1DV2r76wu_c?usp=sha
 ## DEPLOYMENT 🚀
 
 #### Deployment is done using nginx web server and uWsgi application server
+#### The web app is deployed in Amazon EC2 instance and could be reached from the following link:
 
 ## DEMO 
 (coming soon!)
